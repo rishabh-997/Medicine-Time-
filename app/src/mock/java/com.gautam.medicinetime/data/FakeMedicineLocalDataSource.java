@@ -1,7 +1,7 @@
 package com.gautam.medicinetime.data;
 
 
-import android.support.annotation.VisibleForTesting;
+import androidx.annotation.VisibleForTesting;
 
 import com.gautam.medicinetime.data.source.History;
 import com.gautam.medicinetime.data.source.MedicineAlarm;

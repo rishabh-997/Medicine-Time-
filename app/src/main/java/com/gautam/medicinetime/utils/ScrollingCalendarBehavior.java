@@ -2,7 +2,7 @@ package com.gautam.medicinetime.utils;
 
 import android.content.Context;
 import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 

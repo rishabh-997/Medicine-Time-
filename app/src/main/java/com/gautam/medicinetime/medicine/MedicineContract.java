@@ -1,12 +1,9 @@
 package com.gautam.medicinetime.medicine;
 
-import android.support.annotation.NonNull;
-
 import com.gautam.medicinetime.BasePresenter;
 import com.gautam.medicinetime.BaseView;
 import com.gautam.medicinetime.data.source.MedicineAlarm;
 
-import java.util.Date;
 import java.util.List;
 
 /**
