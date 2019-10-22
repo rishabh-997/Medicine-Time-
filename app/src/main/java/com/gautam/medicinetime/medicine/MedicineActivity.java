@@ -2,13 +2,15 @@ package com.gautam.medicinetime.medicine;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
 import androidx.core.view.ViewCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -18,9 +20,14 @@ import android.widget.TextView;
 
 import com.gautam.medicinetime.Injection;
 import com.gautam.medicinetime.R;
+import com.gautam.medicinetime.addmedicine.AddMedicineActivity;
 import com.gautam.medicinetime.report.MonthlyReportActivity;
 import com.gautam.medicinetime.utils.ActivityUtils;
 import com.github.sundeepk.compactcalendarview.CompactCalendarView;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -34,6 +41,9 @@ import butterknife.OnClick;
 
 public class MedicineActivity extends AppCompatActivity {
 
+
+    DrawerLayout dl;
+    ActionBarDrawerToggle abdt;
 
     @BindView(R.id.compactcalendar_view)
     CompactCalendarView mCompactCalendarView;
@@ -77,6 +87,27 @@ public class MedicineActivity extends AppCompatActivity {
         setContentView(R.layout.activity_medicine);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
+
+        dl=findViewById(R.id.drawer_layout);
+        abdt=new ActionBarDrawerToggle(this,dl,toolbar,R.string.Open,R.string.Close);
+        abdt.setDrawerIndicatorEnabled(true);
+        dl.addDrawerListener(abdt);
+        abdt.syncState();
+        NavigationView navview=findViewById(R.id.nav_view);
+
+        navview.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                if(id == R.id.nav_add_medicine){
+
+                    Intent intent = new Intent(MedicineActivity.this, AddMedicineActivity.class);
+                    startActivityForResult(intent, AddMedicineActivity.REQUEST_ADD_TASK);
+                }
+
+                return true;
+            }
+        });
 
         mCompactCalendarView.setLocale(TimeZone.getDefault(), /*Locale.getDefault()*/Locale.ENGLISH);
 

@@ -4,12 +4,12 @@ package com.gautam.medicinetime.medicine;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -20,6 +20,8 @@ import com.gautam.medicinetime.R;
 import com.gautam.medicinetime.addmedicine.AddMedicineActivity;
 import com.gautam.medicinetime.data.source.MedicineAlarm;
 import com.gautam.medicinetime.views.RobotoLightTextView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -90,6 +92,9 @@ public class MedicineFragment extends Fragment implements MedicineContract.View 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
+
         FloatingActionButton fab = (FloatingActionButton) getActivity().findViewById(R.id.fab_add_task);
         fab.setImageResource(R.drawable.ic_add);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +103,8 @@ public class MedicineFragment extends Fragment implements MedicineContract.View 
                 presenter.addNewMedicine();
             }
         });
+
+
     }
 
     private void setAdapter() {

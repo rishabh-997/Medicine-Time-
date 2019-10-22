@@ -1,10 +1,11 @@
 package com.gautam.medicinetime.utils;
 
 import android.content.Context;
-import android.support.design.widget.AppBarLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
+import com.google.android.material.appbar.AppBarLayout;
 
 public class ScrollingCalendarBehavior extends AppBarLayout.Behavior {
 

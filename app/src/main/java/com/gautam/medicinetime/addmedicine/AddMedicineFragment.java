@@ -8,7 +8,6 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatSpinner;
@@ -30,6 +29,7 @@ import com.gautam.medicinetime.data.source.MedicineAlarm;
 import com.gautam.medicinetime.data.source.Pills;
 import com.gautam.medicinetime.views.DayViewCheckBox;
 import com.gautam.medicinetime.views.RobotoBoldTextView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
