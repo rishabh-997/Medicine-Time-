@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.gautam.medicinetime.Injection;
+import com.gautam.medicinetime.Leaderboard.LeaderboardActivity;
 import com.gautam.medicinetime.R;
 import com.gautam.medicinetime.addmedicine.AddMedicineActivity;
 import com.gautam.medicinetime.report.MonthlyReportActivity;
@@ -101,10 +102,10 @@ public class MedicineActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if(id == R.id.nav_leader){
-
+                    startActivity(new Intent(MedicineActivity.this, LeaderboardActivity.class));
                 }
                 else if (id == R.id.nav_result){
-
+                    startActivity(new Intent(MedicineActivity.this, MonthlyReportActivity.class));
                 }
                 else if (id == R.id.nav_logout){
 
