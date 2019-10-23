@@ -29,6 +29,7 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -108,7 +109,11 @@ public class MedicineActivity extends AppCompatActivity {
                     startActivity(new Intent(MedicineActivity.this, MonthlyReportActivity.class));
                 }
                 else if (id == R.id.nav_logout){
+                    FirebaseAuth.getInstance().signOut();
 
+                }
+                else if(id == R.id.nav_home){
+                    startActivity(new Intent(MedicineActivity.this,MedicineActivity.class));
                 }
                 return true;
             }

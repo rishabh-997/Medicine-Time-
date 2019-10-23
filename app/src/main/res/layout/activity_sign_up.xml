@@ -18,75 +18,68 @@
         android:orientation="vertical">
 
 
-            <EditText
-                android:id="@+id/edt_txt_sign_up_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Name"
-                android:autofillHints="true"
-                android:inputType="text"
-                android:maxLines="1"
-                android:singleLine="true"
-                />
+        <EditText
+            android:id="@+id/edt_txt_sign_up_name"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:autofillHints="true"
+            android:hint="Enter Name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true" />
 
 
+        <EditText
+            android:id="@+id/edt_txt_sign_up_age"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Enter age(in years)"
+            android:maxLines="1"
+            android:singleLine="true"
+
+            />
 
 
+        <EditText
+            android:id="@+id/edt_txt_sign_up_email"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Enter Email address"
 
-            <EditText
-                android:id="@+id/edt_txt_sign_up_age"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter age(in years)"
-                android:maxLines="1"
-                android:singleLine="true"
+            android:maxLines="1"
+            android:singleLine="true"
 
-                />
-
-
+            />
 
 
-            <EditText
-                android:id="@+id/edt_txt_sign_up_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Email address"
+        <EditText
+            android:id="@+id/edt_txt_sign_up_password"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Enter Password"
 
-                android:maxLines="1"
-                android:singleLine="true"
+            android:maxLines="1"
+            android:singleLine="true"
 
-                />
-
-
-            <EditText
-                android:id="@+id/edt_txt_sign_up_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Password"
-
-                android:maxLines="1"
-                android:singleLine="true"
-
-                />
+            />
 
 
+        <EditText
+            android:id="@+id/edt_txt_sign_up_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Confirm Password"
 
+            android:maxLines="1"
+            android:singleLine="true"
 
-            <EditText
-                android:id="@+id/edt_txt_sign_up_confirm_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Confirm Password"
-
-                android:maxLines="1"
-                android:singleLine="true"
-
-                />
+            />
 
         <Button
             android:id="@+id/btn_sign_up"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Button>
+            android:layout_height="100dp"
+            android:text="Sign Up"></Button>
 
     </LinearLayout>
 </ScrollView>

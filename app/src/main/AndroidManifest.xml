@@ -24,6 +24,7 @@
         <activity android:name=".report.MonthlyReportActivity"/>
         <activity android:name=".medicine.MedicineActivity"/>
         <activity android:name=".Authentication.SignUpActivity"/>
+        <activity android:name=".Leaderboard.LeaderboardActivity"/>
     </application>
 
 </manifest>

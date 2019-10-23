@@ -73,6 +73,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                            finish();
                            startActivity(i);
                        }
+                       else{
+                           Toast.makeText(SignUpActivity.this, task.getException().getMessage().toString(), Toast.LENGTH_SHORT).show();
+                       }
                     }
                 });
             }
