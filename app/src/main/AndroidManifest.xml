@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".medicine.MedicineActivity">
+        <activity android:name=".Authentication.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +22,8 @@
         <activity android:name=".addmedicine.AddMedicineActivity" />
         <activity android:name=".alarm.ReminderActivity" />
         <activity android:name=".report.MonthlyReportActivity"/>
+        <activity android:name=".medicine.MedicineActivity"/>
+        <activity android:name=".Authentication.SignUpActivity"/>
     </application>
 
 </manifest>
