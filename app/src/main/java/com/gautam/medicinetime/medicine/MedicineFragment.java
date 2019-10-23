@@ -93,18 +93,6 @@ public class MedicineFragment extends Fragment implements MedicineContract.View 
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
-
-        FloatingActionButton fab = (FloatingActionButton) getActivity().findViewById(R.id.fab_add_task);
-        fab.setImageResource(R.drawable.ic_add);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.addNewMedicine();
-            }
-        });
-
-
     }
 
     private void setAdapter() {

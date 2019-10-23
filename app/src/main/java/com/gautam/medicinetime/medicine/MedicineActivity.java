@@ -66,9 +66,6 @@ public class MedicineActivity extends AppCompatActivity {
     @BindView(R.id.contentFrame)
     FrameLayout contentFrame;
 
-    @BindView(R.id.fab_add_task)
-    FloatingActionButton fabAddTask;
-
     @BindView(R.id.coordinatorLayout)
     CoordinatorLayout coordinatorLayout;
 
@@ -100,11 +97,18 @@ public class MedicineActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 int id = menuItem.getItemId();
                 if(id == R.id.nav_add_medicine){
-
                     Intent intent = new Intent(MedicineActivity.this, AddMedicineActivity.class);
-                    startActivityForResult(intent, AddMedicineActivity.REQUEST_ADD_TASK);
+                    startActivity(intent);
                 }
+                else if(id == R.id.nav_leader){
 
+                }
+                else if (id == R.id.nav_result){
+
+                }
+                else if (id == R.id.nav_logout){
+
+                }
                 return true;
             }
         });

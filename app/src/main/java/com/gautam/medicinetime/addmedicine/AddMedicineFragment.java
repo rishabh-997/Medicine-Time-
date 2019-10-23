@@ -153,7 +153,6 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
 
     @Override
     public void showMedicineList() {
-        getActivity().setResult(Activity.RESULT_OK);
         getActivity().finish();
     }
 
