@@ -16,12 +16,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
   EditText name,email,password,confirmpassword,age;
   Button signup;
+  DatabaseReference databaseReference;
   FirebaseAuth firebaseAuth;
+  FirebaseDatabase firebaseDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         confirmpassword=findViewById(R.id.edt_txt_sign_up_confirm_password);
         age=findViewById(R.id.edt_txt_sign_up_age);
         firebaseAuth= FirebaseAuth.getInstance();
+        firebaseDatabase=FirebaseDatabase.getInstance();
+
+        databaseReference=firebaseDatabase.getReference("Users");
+
 
         signup=findViewById(R.id.btn_sign_up);
         signup.setOnClickListener(this);
@@ -68,6 +76,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                        if(task.isSuccessful())
                        {
+                           String uid=databaseReference.push().getKey();
+                           databaseReference.child(uid).child("Name").setValue(xname);
+                           databaseReference.child(uid).child("Email").setValue(xemail);
+                           databaseReference.child(uid).child("Points").setValue("0");
+
                            Toast.makeText(getApplicationContext(), "Successfully signed in", Toast.LENGTH_SHORT).show();
                            Intent i=new Intent(getApplicationContext(), MedicineActivity.class);
                            finish();
